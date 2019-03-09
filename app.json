@@ -1,0 +1,42 @@
+{
+	"pages":[
+		"pages/index/index",
+		"pages/logs/logs",
+		"pages/center/center",
+		"pages/weather/weather"
+	],
+	"window":{
+		"backgroundTextStyle":"light",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTitleText": "WeChat",
+		"navigationBarTextStyle":"black"
+	},
+	"tabBar": {
+		"borderStyle":"white",
+		"backgroundColor":"#ffffff",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"text": "主页",
+			"iconPath": "/libs/img/tabs/home.png",
+			"selectedIconPath": "/libs/img/tabs/home-active.png"
+		},
+		{
+			"pagePath":"pages/logs/logs",
+			"text":"Logs",
+			"iconPath":"/libs/img/tabs/message.png",
+			"selectedIconPath":"libs/img/tabs/message-active.png"
+		},
+		{
+			"pagePath":"pages/center/center",
+			"text":"个人中心",
+			"iconPath":"/libs/img/tabs/profile.png",
+			"selectedIconPath":"libs/img/tabs/profile-active.png"
+		}
+		]
+	},
+	"permission": {
+		"scope.userLocation": {
+		  "desc": "获取地址"
+		}
+	  }
+}

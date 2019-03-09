@@ -1,0 +1,4 @@
+page{
+    background: linear-gradient(rgb(6, 172, 201),rgb(4, 115, 134));
+    
+}

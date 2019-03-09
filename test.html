@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let pro = new Promise((resolve,reject)=>{
+            let randNum = Math.random()*3000
+            if(randNum<1500){
+                resolve()
+            }else{
+                reject('failed1-'+randNum)
+           }
+        })
+        pro.then(res=>{
+            console.log(res)
+            return new Promise((resolve,reject)=>{
+                let randNum=Math.random()*3000
+                if(randNum<1500){
+                    resolve()
+                }else{
+                    reject('failed2-'+randNum)
+                }
+            })
+        }).catch(res=>{
+            
+        }).then(res=>{
+            console.log(res)
+            return new Promise((resolve,reject)=>{
+                let randNum=Math.random()*3000
+                if(randNum<1500){
+                    resolve('success3-'+randNum)
+                }else{
+                    reject('failed3-'+randNum)
+                }
+            })
+        }).then(res=>{
+            console.log(res)
+        })    
+    </script>
+</body>
+</html>

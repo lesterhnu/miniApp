@@ -1,0 +1,8 @@
+<view >
+	<block wx:for="{{res}}" wx:key="*this">
+		<view>
+		name:{{item.role_name}}
+		desc:{{item.role_desc}}
+		</view>
+	</block>
+</view>
